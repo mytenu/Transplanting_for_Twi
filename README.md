@@ -4,9 +4,9 @@ This repository contains the complete replication code for all experiments repor
 
 
 # Repository Structure
-├── prepare_data.py          # Step 1: corpus preprocessing + tokenizer training # /n
-├── embedding_init_colab.py  # Step 2: embedding initialization experiments (Colab)
-└── README.md
+i. prepare_data.py          # Step 1: corpus preprocessing + tokenizer training 
+ii. embedding_init_colab.py  # Step 2: embedding initialization experiments (Colab)
+
 
 # Data
 The Twi-English parallel corpus is publicly available on Mendeley Data:
