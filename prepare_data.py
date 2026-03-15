@@ -1,44 +1,4 @@
 """
-prepare_data.py
-===============
-Replication code for:
-
-  "Vocabulary Transplanting for Twi: Extending Multilingual Pretrained
-   Models with Language-Specific Byte Pair Encoding Tokenization"
-
-This script reproduces Section 3.1 (Corpus Construction and Preprocessing)
-and Section 3.2 (Twi-Specific BPE Tokenizer Training) of the paper.
-
-It performs the following steps in order:
-
-  Step 1 — Load corpus.csv and validate column structure
-  Step 2 — Remove duplicate sentence pairs (data quality filter)
-  Step 3 — Extract monolingual Twi and English sub-corpora
-           → tw_corpus.txt  (one Twi sentence per line)
-           → en_corpus.txt  (one English sentence per line)
-  Step 4 — Train Twi-specific BPE tokenizer (SentencePiece)
-           → tok_twi_demo.model
-           → tok_twi_demo.vocab
-  Step 5 — Train English BPE tokenizer under identical settings
-           (controlled baseline for fertility comparison)
-           → tok_english_demo.model
-           → tok_english_demo.vocab
-  Step 6 — Print corpus statistics (reproduces Table 2 of the paper)
-  Step 7 — Verify outputs match paper-reported values
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EXPECTED OUTPUTS (paper Section 3.1 and 3.2)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Corpus after deduplication       : 16,083 sentence pairs
-  Twi tokens (total)               : 111,253
-  Twi vocabulary (unique forms)    : 8,393
-  English tokens (total)           : 113,487
-  English vocabulary (unique forms): 7,427
-  Twi tokenizer vocabulary size    : 8,000
-  English tokenizer vocabulary size: 8,000
-  Twi character coverage           : 0.9995
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 USAGE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
