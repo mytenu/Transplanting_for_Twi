@@ -4,7 +4,7 @@ This repository contains the complete replication code for all experiments repor
 
 
 # Repository Structure
-├── prepare_data.py          # Step 1: corpus preprocessing + tokenizer training
+├── prepare_data.py          # Step 1: corpus preprocessing + tokenizer training //
 ├── embedding_init_colab.py  # Step 2: embedding initialization experiments (Colab)
 └── README.md
 
